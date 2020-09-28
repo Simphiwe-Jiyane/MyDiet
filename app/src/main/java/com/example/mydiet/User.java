@@ -4,10 +4,13 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    //TODO: Integrate user age
+
     private String firstName;
     private String surname;
     private String username;
-    private int age;
+    private String email;
+    private String password;
     private double height;
     private double weight;
     private double targetWeight;
@@ -15,6 +18,8 @@ public class User implements Serializable {
     private String TargetReason;
     private double avgCalories;
 
+    //Getters and setters
+    //#region
     public String getFirstName() {
         return firstName;
     }
@@ -39,12 +44,12 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public double getHeight() {
@@ -94,4 +99,13 @@ public class User implements Serializable {
     public void setAvgCalories(double avgCalories) {
         this.avgCalories = avgCalories;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    //#endregion
 }

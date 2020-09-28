@@ -21,7 +21,7 @@ public class TargetCaloriesActivity extends AppCompatActivity {
         btnNotSure = (Button)findViewById(R.id.btnUnkown);
         btnKnown = (Button)findViewById(R.id.btnKnown);
         avgCalories = (EditText) findViewById(R.id.etxtCaloriesAvg);
-
+        user = (User)getIntent().getSerializableExtra("User");
 
         if(avgCalories.getText().toString().isEmpty()){
 
@@ -43,6 +43,7 @@ public class TargetCaloriesActivity extends AppCompatActivity {
                     user.setAvgCalories(Double.parseDouble(avgCalories.getText().toString()));
                     Intent intent = new Intent(TargetCaloriesActivity.this,SignUpActivity.class);
                     intent.putExtra("User",user);
+                    startActivity(intent);
                 }
             });
         }

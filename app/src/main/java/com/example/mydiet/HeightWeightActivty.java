@@ -16,11 +16,11 @@ public class HeightWeightActivty extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        height = findViewById(R.id.etxtHeight);
-        weight = findViewById(R.id.etxtWeight);
-        next = (Button)findViewById(R.id.btnGoNext);
         setContentView(R.layout.activity_height_weight_activty);
         user = (User) getIntent().getSerializableExtra("User");
+        height = (EditText)findViewById(R.id.etxtHeight);
+        weight = (EditText)findViewById(R.id.etxtWeight);
+        next = (Button)findViewById(R.id.btnGoNext);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +31,6 @@ public class HeightWeightActivty extends AppCompatActivity {
                 intent.putExtra("User",user);
                 startActivity(intent);
             }
-                    });
-                    }
-                    }
+        });
+    }
+}

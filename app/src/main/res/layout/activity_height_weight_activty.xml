@@ -39,26 +39,27 @@
         android:id="@+id/etxtHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
         android:ems="10"
+        android:hint="Enter height"
         android:inputType="textPersonName"
-        android:text="Height"
         android:textColor="#fefefe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="172dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etxtWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
+        android:hint="Enter weight"
         android:inputType="textPersonName"
-        android:text="Weight"
         android:textColor="#fefefe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
