@@ -2,6 +2,7 @@ package com.example.mydiet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,9 @@ public class TargetWeightCaptureActivity extends AppCompatActivity {
                 user.setTargetWeight(target);
                 user.setTargetReason(reason);
 
+                Intent intent = new Intent(TargetWeightCaptureActivity.this,TargetCaloriesActivity.class);
+                intent.putExtra("User",user);
+                startActivity(intent);
             }
         });
     }

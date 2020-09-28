@@ -23,29 +23,25 @@ public class TargetCaloriesActivity extends AppCompatActivity {
         avgCalories = (EditText) findViewById(R.id.etxtCaloriesAvg);
         user = (User)getIntent().getSerializableExtra("User");
 
-        if(avgCalories.getText().toString().isEmpty()){
+        btnNotSure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                user.setAvgCalories(0);
+                Intent intent = new Intent(TargetCaloriesActivity.this,SignUpActivity.class);
+                intent.putExtra("User",user);
+                startActivity(intent);
+            }
+        });
 
-        }
+        btnKnown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                user.setAvgCalories(Double.parseDouble(avgCalories.getText().toString()));
+                Intent intent = new Intent(TargetCaloriesActivity.this,SignUpActivity.class);
+                intent.putExtra("User",user);
+                startActivity(intent);
+            }
+        });
 
-        else{
-            btnNotSure.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    user.setAvgCalories(0);
-                    Intent intent = new Intent(TargetCaloriesActivity.this,SignUpActivity.class);
-                    intent.putExtra("User",user);
-                }
-            });
-
-            btnKnown.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    user.setAvgCalories(Double.parseDouble(avgCalories.getText().toString()));
-                    Intent intent = new Intent(TargetCaloriesActivity.this,SignUpActivity.class);
-                    intent.putExtra("User",user);
-                    startActivity(intent);
-                }
-            });
-        }
     }
 }
